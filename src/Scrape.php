@@ -40,7 +40,7 @@ class Scrape
      *
      * @param Crawler $document The document of the first page
      */
-    private function crawlePagination(Crawler $document): void
+    private function crawlPagination(Crawler $document): void
     {
         $lastPage = 1;
         try {
