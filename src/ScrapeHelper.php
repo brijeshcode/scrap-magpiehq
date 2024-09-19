@@ -11,11 +11,15 @@ class ScrapeHelper
 {
     public static function fetchDocument(string $url): Crawler
     {
-        $client = new Client();
+        try {
+            $client = new Client();
 
-        $response = $client->get($url);
+            $response = $client->get($url);
 
-        return new Crawler($response->getBody()->getContents(), $url);
+            return new Crawler($response->getBody()->getContents(), $url);
+        } catch (Exception $exception) {
+            throw new Exception("Failed to fetch document at url: $url. " . $exception->getMessage());
+        }
     }
 
     /**
