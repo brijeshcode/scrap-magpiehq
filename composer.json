@@ -1,0 +1,28 @@
+{
+  "name": "magpie/scrape-challenge",
+  "type": "project",
+  "require": {
+    "symfony/dom-crawler": "^5.2",
+    "guzzlehttp/guzzle": "^7.2",
+    "symfony/css-selector": "^5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.64",
+    "phpstan/phpstan": "^1.12"
+  },
+  "scripts": {
+    "fix": "php-cs-fixer fix",
+    "dry-fix": "php-cs-fixer fix --dry-run --diff",
+    "phpstan": "vendor/bin/phpstan analyse",
+    "scrap" : "php .src/Scrap.php",
+    "full-check": [
+        "php-cs-fixer fix",
+        "vendor/bin/phpstan analyse"
+    ]
+  }
+}
