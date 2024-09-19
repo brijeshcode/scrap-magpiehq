@@ -23,7 +23,7 @@ class Scrape
 
         $this->extractProducts($document);
 
-        $this->crawlePagination($document);
+        $this->crawlPagination($document);
 
         file_put_contents('output.json', json_encode(array_values($this->products), JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
