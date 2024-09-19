@@ -19,7 +19,6 @@
     "fix": "php-cs-fixer fix",
     "dry-fix": "php-cs-fixer fix --dry-run --diff",
     "phpstan": "vendor/bin/phpstan analyse",
-    "scrap" : "php .src/Scrap.php",
     "full-check": [
         "php-cs-fixer fix",
         "vendor/bin/phpstan analyse"

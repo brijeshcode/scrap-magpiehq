@@ -46,7 +46,7 @@ class Product
 
         $date = ScrapeHelper::extractDateFromText($shippingText);
 
-        return is_null($date) ||  strtotime($date) === false?  'N/A' : (string) date('Y-m-d', strtotime($date)) ;
+        return is_null($date) ||  strtotime($date) === false ? 'N/A' : (string) date('Y-m-d', strtotime($date)) ;
     }
 
     private function extractImage(Crawler $productElement): string

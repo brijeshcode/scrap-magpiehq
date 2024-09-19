@@ -25,9 +25,9 @@ class Scrape
 
         $this->crawlePagination($document);
 
-        file_put_contents('output.json', json_encode(array_values($this->products)));
+        file_put_contents('output.json', json_encode(array_values($this->products), JSON_PRETTY_PRINT));
 
-        print_r('Scrap successful, '. count($this->products). ' products fetched.');
+        print_r('Scrap successful, ' . count($this->products) . ' products fetched.');
     }
 
     /**
